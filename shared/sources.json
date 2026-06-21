@@ -198,6 +198,24 @@
     "color": "orange",
     "interval": 600000
   },
+  "bbc": {
+    "name": "BBC",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://www.bbc.com/",
+    "color": "red",
+    "interval": 300000,
+    "title": "International"
+  },
+  "reuters": {
+    "name": "Reuters",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://www.reuters.com/",
+    "color": "gray",
+    "interval": 300000,
+    "title": "International"
+  },
   "cankaoxiaoxi": {
     "name": "参考消息",
     "column": "world",
