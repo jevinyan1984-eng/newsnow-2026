@@ -1,4 +1,4 @@
-import { ourongxing, react } from "@ourongxing/eslint-config"
+import { jevinyan, react } from "@jevinyan/eslint-config"
 
 export default ourongxing({
   type: "app",
