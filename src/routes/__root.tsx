@@ -53,9 +53,8 @@ function RootComponent() {
         </header>
         <main className={$([
           "mt-2",
-          "min-h-[calc(100vh-180px)]",
-          "md:(min-h-[calc(100vh-175px)])",
-          "lg:(min-h-[calc(100vh-194px)])",
+          // 手机端保留更多高度给内容，减去较小的 header/footer 空间
+          "min-h-[calc(100vh-120px)] md:(min-h-[calc(100vh-175px)]) lg:(min-h-[calc(100vh-194px)])",
         ])}
         >
           <Outlet />

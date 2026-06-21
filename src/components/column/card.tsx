@@ -33,11 +33,12 @@ export const CardWrapper = forwardRef<HTMLElement, ItemsProps>(({ id, isDragging
     <div
       ref={ref}
       className={$(
-        "flex flex-col h-500px rounded-2xl p-4 cursor-default",
-        // "backdrop-blur-5",
+        // 手机端使用接近全屏高度，桌面保持原先高度
+        "flex flex-col min-h-[calc(100vh-120px)] md:h-500px rounded-2xl p-4 cursor-default backdrop-blur-6",
         "transition-opacity-300",
         isDragging && "op-50",
-        `bg-${sources[id].color}-500 dark:bg-${sources[id].color} bg-op-40!`,
+        // 降低背景不透明度以实现更透明的风格
+        `bg-${sources[id].color}-500 dark:bg-${sources[id].color} bg-op-30!`,
       )}
       style={{
         transformOrigin: "50% 50%",
@@ -153,10 +154,10 @@ function NewsCard({ id, setHandleRef }: NewsCardProps) {
 
       <OverlayScrollbar
         className={$([
-          "h-full p-2 overflow-y-auto rounded-2xl bg-base bg-op-70!",
-          isFetching && `animate-pulse`,
-          `sprinkle-${sources[id].color}`,
-        ])}
+            "h-full p-2 overflow-y-auto rounded-2xl bg-base bg-op-40! backdrop-blur-4",
+            isFetching && `animate-pulse`,
+            `sprinkle-${sources[id].color}`,
+          ])}
         options={{
           overflow: { x: "hidden" },
         }}

@@ -64,7 +64,8 @@ export function Dnd() {
             <motion.li
               key={id}
               className={$(isMobile && "flex-shrink-0", isMobile && index === items.length - 1 && "mr-2")}
-              style={isMobile ? { width: `${width - 16 > WIDTH ? WIDTH : width - 16}px` } : undefined}
+              // 移动端不再限制最大宽度为 WIDTH，使用屏幕宽度减去外边距以实现全宽展示
+              style={isMobile ? { width: `${Math.max(0, width - 16)}px` } : undefined}
               transition={{
                 type: "tween",
                 duration: AnimationDuration / 1000,
